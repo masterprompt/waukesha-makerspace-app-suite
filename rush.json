@@ -1,0 +1,39 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
+  "rushVersion": "5.149.0",
+  "pnpmVersion": "8.15.8",
+  "nodeSupportedVersionRange": ">=18.20.3 <19.0.0 || >=20.14.0 <21.0.0",
+  "projectFolderMinDepth": 2,
+  "projectFolderMaxDepth": 2,
+  "gitPolicy": {
+  },
+
+  "repository": {
+    "url": "https://github.com/masterprompt/waukesha-makerspace-app-suite",
+    "defaultBranch": "main",
+    "defaultRemote": "origin"
+  },
+
+  "eventHooks": {
+    "preRushInstall": [],
+    "postRushInstall": [],
+    "preRushBuild": [],
+    "postRushBuild": [],
+    "preRushx": [],
+    "postRushx": []
+  },
+  "variants": [],
+
+  "projects": [
+    {
+      "packageName": "wmi-api",
+      "projectFolder": "apps/api",
+      "tags": [ "api" ]
+    },
+    {
+      "packageName": "spa",
+      "projectFolder": "apps/spa",
+      "tags": [ "spa" ]
+    }
+  ]
+}

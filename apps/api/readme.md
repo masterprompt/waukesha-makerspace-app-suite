@@ -1,0 +1,2 @@
+https://www.split.io/blog/serverless-express-and-typescript-application-with-aws-lambda/
+https://dev.to/aws-builders/creating-a-serverless-api-using-aws-lambda-and-nodejs-with-typescript-and-expressjs-4kfk
