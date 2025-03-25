@@ -7,9 +7,17 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        node-version: [18.x]
     steps:
     - uses: actions/checkout@v2
     - name: Write a multi-line message
       run: |
         echo This demo file shows a 
         echo very basic and easy-to-understand workflow.
+    - uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: cd apps/api && npm install
