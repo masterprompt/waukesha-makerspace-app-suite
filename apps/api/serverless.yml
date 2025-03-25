@@ -1,7 +1,14 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: masterprompt
 service: wmi-api
 provider:
   name: aws
   runtime: nodejs18.x
+  region: us-east-2
+  deploymentBucket:
+    name: wmi-api-deploys-${self:provider.region}
+    blockPublicAccess: true
+    serverSideEncryption: AES256
 plugins:
   - serverless-offline
 functions:
