@@ -10,14 +10,10 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        node-version: [18.x]
+        node-version: [20.x]
     steps:
-    - uses: actions/checkout@v2
-    - name: Write a multi-line message
-      run: |
-        echo This demo file shows a 
-        echo very basic and easy-to-understand workflow.
-    - uses: actions/setup-node@v2
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: cd apps/api && npm install
+    - name: Install dependencies
+      run: cd apps/api && npm install
+    - name: Deploy to AWS
+      run: cd apps/api && npm run deploy:prod
+
